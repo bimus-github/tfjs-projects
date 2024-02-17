@@ -8,7 +8,7 @@ input.addEventListener("change", (event) => {
   reader.addEventListener("load", () => {
     img.src = reader.result;
 
-    document.getElementById("animal").innerHTML = "Guessing...";
+    document.getElementById("animal").innerHTML = "Finding...";
     mobilenet.load().then((model) => {
       // Classify the image.
       model.classify(img).then((predictions) => {
